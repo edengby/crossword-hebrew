@@ -76,7 +76,7 @@ function displayResults(results) {
         });
 
         if (results.length === 50) {
-            wordList.innerHTML += '<li>מוצגות 10 התוצאות הראשונות בלבד</li>';
+            wordList.innerHTML += '<li>מוצגות 50 התוצאות הראשונות בלבד</li>';
         }
     }
 }
