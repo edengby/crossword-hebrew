@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     direction: rtl;
@@ -49,10 +50,12 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Letter inputs grid layout */
 #letter-inputs {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     gap: 8px;
-    justify-content: center; /* Center the inputs horizontally */
+    justify-content: center;
     max-width: 100%; /* Ensures the grid doesn't stretch too wide */
 }
 
@@ -61,16 +64,6 @@ input.letter {
     text-align: center;
     padding: 8px;
     font-size: 1.1em;
-}
-
-@media (max-width: 600px) {
-    input.letter {
-        max-width: 30px;
-    }
-
-    #letter-inputs {
-        gap: 8px;
-    }
 }
 
 #results {
@@ -89,9 +82,11 @@ li {
     color: #333;
 }
 
+/* Media queries for mobile responsiveness */
 @media (max-width: 600px) {
     .container {
         width: 90%;
+        padding: 15px;
     }
 
     input.letter {
@@ -110,7 +105,18 @@ li {
     p {
         font-size: 1em;
     }
+
+    #letter-count {
+        font-size: 1em;
+    }
+
+    #letter-inputs {
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        gap: 5px;
+    }
 }
+
+/* Footer styling */
 footer {
     background-color: #f1f1f1;
     padding: 20px 0;
