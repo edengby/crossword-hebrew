@@ -56,7 +56,7 @@ function findWords() {
     });
 
     const regexPattern = new RegExp("^" + pattern + "$");
-    const results = words.filter(word => regexPattern.test(word)).slice(0, 10);  // Limit results to 10
+    const results = words.filter(word => regexPattern.test(word)).slice(0, 50);  // Limit results to 10
 
     displayResults(results);
 }
