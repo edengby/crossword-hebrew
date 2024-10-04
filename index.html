@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פתרון תשבצים בעברית</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>פתרון תשבצים בעברית</h1>
+
+    <div class="search">
+        <label for="letter-count">בחר מספר אותיות:</label>
+        <select id="letter-count" onchange="generateInputs()">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+
+        <div id="letter-inputs">
+            <!-- Dynamic letter inputs will be generated here -->
+        </div>
+
+        <button onclick="findWords()">חפש מילים</button>
+    </div>
+
+    <div id="results">
+        <h3>תוצאות:</h3>
+        <ul id="word-list"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
