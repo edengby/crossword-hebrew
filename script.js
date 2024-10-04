@@ -20,15 +20,11 @@ function loadWordsFromCSV() {
 // Global variable to store the Hebrew words
 let words = [];
 
-// Load the words on page load and select 3 letters by default
+// Load the words on page load
 window.onload = function() {
     loadWordsFromCSV().then(loadedWords => {
         words = loadedWords;
     });
-
-    // Set default letter count to 3
-    document.getElementById('letter-count').value = 3;
-    generateInputs();
 };
 
 // Function to generate letter input fields based on selected number of letters
