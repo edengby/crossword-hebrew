@@ -20,10 +20,11 @@ function loadWordsFromCSV() {
 // Global variable to store the Hebrew words
 let words = [];
 
-// Load the words on page load
+// Load the words on page load and generate initial inputs
 window.onload = function() {
     loadWordsFromCSV().then(loadedWords => {
         words = loadedWords;
+        generateInputs();  // Initialize the input fields for 3 letters
     });
 };
 
@@ -55,7 +56,7 @@ function findWords() {
     });
 
     const regexPattern = new RegExp("^" + pattern + "$");
-    const results = words.filter(word => regexPattern.test(word));
+    const results = words.filter(word => regexPattern.test(word)).slice(0, 10);  // Limit results to 10
 
     displayResults(results);
 }
@@ -73,5 +74,9 @@ function displayResults(results) {
             li.textContent = word;
             wordList.appendChild(li);
         });
+
+        if (results.length === 10) {
+            wordList.innerHTML += '<li>מוצגות 10 התוצאות הראשונות בלבד</li>';
+        }
     }
 }
