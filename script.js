@@ -75,7 +75,7 @@ function displayResults(results) {
             wordList.appendChild(li);
         });
 
-        if (results.length === 10) {
+        if (results.length === 50) {
             wordList.innerHTML += '<li>מוצגות 10 התוצאות הראשונות בלבד</li>';
         }
     }
