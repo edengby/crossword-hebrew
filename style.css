@@ -50,20 +50,33 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Letter inputs grid layout */
 #letter-inputs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-template-columns: repeat(10, 1fr); /* Ensure 10 equal-width columns */
     gap: 8px;
-    justify-content: center;
-    max-width: 100%; /* Ensures the grid doesn't stretch too wide */
+    justify-items: center; /* Center each input */
+    max-width: 100%;
 }
 
 input.letter {
-    width: 40px;
+    width: 100%;
+    max-width: 40px; /* Limit the maximum width */
     text-align: center;
     padding: 8px;
     font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+    #letter-inputs {
+        grid-template-columns: repeat(10, minmax(25px, 1fr)); /* Adjust input width on small screens */
+        gap: 5px;
+    }
+
+    input.letter {
+        max-width: 100%;
+        padding: 6px;
+        font-size: 1em;
+    }
 }
 
 #results {
