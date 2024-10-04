@@ -60,7 +60,7 @@ button:hover {
 
 input.letter {
     width: 100%;
-    max-width: 40px; /* Limit the maximum width */
+    max-width: 20px; /* Limit the maximum width */
     text-align: center;
     padding: 8px;
     font-size: 1.1em;
